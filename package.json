@@ -10,8 +10,10 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "boardgame.io": "^0.49.10",
     "vue": "^3.2.27",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "vue3-boardgame": "^1.0.24"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.0",
