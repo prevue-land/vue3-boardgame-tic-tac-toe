@@ -3,12 +3,6 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </nav>
-  </header>
   <main>
     <RouterView />
   </main>
@@ -17,7 +11,8 @@ import { RouterView } from 'vue-router';
 <style>
 html,
 body,
-#app {
+#app,
+main {
   width: 100vw;
   height: 100vh;
 }
@@ -28,15 +23,14 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+h1 {
+  margin-top: 0;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 </style>
