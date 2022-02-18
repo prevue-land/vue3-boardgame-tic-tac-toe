@@ -1,8 +1,10 @@
-export function playerHtmlEntity(player: '0' | '1' | null) {
+import { PossibleCellValue } from '@/types';
+
+export function playerHtmlEntity(character: PossibleCellValue) {
   const entityMap = {
-    '0': '&#9711;',
-    '1': '&#10005;'
+    '0': '&#9711;', // circle
+    '1': '&#10005;' // cross
   };
 
-  return player === null ? '' : entityMap[player];
+  return character === null ? '' : entityMap[character];
 }
