@@ -4,7 +4,7 @@ import { computed, inject, onBeforeUnmount, Ref } from 'vue';
 import TicTacToeBoard from '@/components/TicTacToeBoard.vue';
 import GameOverDialog from '@/components/GameOverDialog.vue';
 
-import { BoardgameIoClient, CustomCtx } from '@/types';
+import { BoardgameIoClient, CustomCtx, Player } from '@/types';
 import { playerHtmlEntity } from '@/utils/playerHtmlEntity';
 
 const client = inject<Ref<BoardgameIoClient>>('client');
@@ -12,7 +12,7 @@ const ctx = inject<Ref<CustomCtx>>('ctx');
 
 const currentPlayerTurnMessage = computed<string>(() => {
   const currentPlayerEntity = playerHtmlEntity(
-    ctx?.value.currentPlayer as string
+    ctx?.value.currentPlayer as Player
   );
 
   return `It's ${currentPlayerEntity}'s turn`;

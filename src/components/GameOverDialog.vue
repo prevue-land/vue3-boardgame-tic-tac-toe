@@ -2,7 +2,7 @@
 import { computed, inject, Ref } from 'vue';
 
 import BlockButton from './BlockButton.vue';
-import { BoardgameIoClient, CustomCtx } from '@/types';
+import { BoardgameIoClient, CustomCtx, Player } from '@/types';
 import { playerHtmlEntity } from '@/utils/playerHtmlEntity';
 
 const client = inject<Ref<BoardgameIoClient>>('client');
@@ -10,7 +10,7 @@ const ctx = inject<Ref<CustomCtx>>('ctx');
 
 const dialogHeaderText = computed<string>(() => {
   const gameResult = ctx?.value.gameover?.winner as string;
-  const player = playerHtmlEntity(ctx?.value.currentPlayer as string);
+  const player = playerHtmlEntity(ctx?.value.currentPlayer as Player);
 
   return gameResult === 'draw' ? "It's a draw!" : `${player} wins!`;
 });

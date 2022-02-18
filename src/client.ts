@@ -5,9 +5,15 @@ import { INVALID_MOVE } from 'boardgame.io/core';
 import { isVictory } from './utils/isVictory';
 import { isDraw } from './utils/isDraw';
 
-import { State, SetupFunction, Moves, EndIfFunction, CustomCtx } from './types';
+import {
+  State,
+  ClientSetupFunction,
+  Moves,
+  EndIfFunction,
+  CustomCtx
+} from './types';
 
-const setup: SetupFunction = () => ({
+const setup: ClientSetupFunction = () => ({
   cells: new Array(9).fill(null)
 });
 

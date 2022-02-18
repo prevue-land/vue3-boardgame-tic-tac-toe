@@ -1,4 +1,6 @@
-export function isVictory(cells: (string | null)[]) {
+import { PossibleCellValue } from '@/types';
+
+export function isVictory(cells: PossibleCellValue[]) {
   const winningPositionIndexes = [
     [0, 1, 2],
     [3, 4, 5],
